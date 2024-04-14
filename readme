@@ -1,0 +1,44 @@
+Smart Dashboard Database
+Overview
+This repository contains a comprehensive SQL script for initializing the smart_dashboard_db, an essential component of the Smart Dashboard application. The database supports critical functionalities like user role management, permissions handling, and storing address data linked to various entities.
+
+Getting Started
+Prerequisites
+To successfully deploy and use the database, you will need:
+
+MySQL Server: Version 8.0 or higher is recommended for full compatibility.
+MySQL Client: Command line or a GUI tool like MySQL Workbench or phpMyAdmin for executing SQL scripts.
+Installation Guide
+Clone the Repository:
+
+bash
+Copy code
+git clone https://github.com/yourusername/smart_dashboard_db.git
+cd smart_dashboard_db
+Running the SQL Script:
+
+Open your MySQL client and authenticate to your MySQL server.
+Execute the following command to create the database and populate it with the necessary tables:
+bash
+Copy code
+mysql -u [your-username] -p < booking_db.sql
+Replace [your-username] with your MySQL username and ensure the script path is correct.
+
+Verify Installation:
+
+After running the script, ensure all tables are created without errors:
+sql
+Copy code
+USE smart_dashboard_db;
+SHOW TABLES;
+Database Schema Details
+Permissions Table: Manages the access levels and capabilities within the application. Fields include permission_id, title, description, created_at, and updated_at.
+
+Addresses Table: Stores detailed address information for users and locations, with fields like address_id, country, city, postal_code, street, created_at, and updated_at.
+
+Roles Table: Holds information about user roles, helping to define hierarchical structures within the application. Fields include role_id, title, description, created_at, and updated_at.
+
+Usage Guidelines
+Connecting to the Database: Use your credentials and server details to connect through your MySQL client. This database is now ready to integrate with your application backend for managing data.
+
+Maintaining the Database: Regular backups and updates are recommended. Monitor the database performance and scalability by utilizing MySQL's built-in tools and logs.
